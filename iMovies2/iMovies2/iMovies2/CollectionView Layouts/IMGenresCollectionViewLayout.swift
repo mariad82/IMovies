@@ -22,30 +22,37 @@ class IMGenresCollectionViewLayout: UICollectionViewFlowLayout {
     let zoomFactor = 0.3
     let startAngle : CGFloat = 270.0
     let rotation  = 20.0
-    
+    let collectionViewDefaultWidth : CGFloat  = 400.0
     let screenSize = UIScreen.main.bounds
+    var width:CGFloat = 0
     
     override init() {
         
+
         super.init()
+        
+        width = CGFloat(self.collectionView?.bounds.size.width ?? collectionViewDefaultWidth)
         self.scrollDirection = .vertical
         
         self.itemSize = CGSize(width: 105, height: 105)
-        self.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.sectionInset = UIEdgeInsets(top: 0, left: width / 10, bottom: 0, right: width / 10)
 
     }
     
     required init?(coder aDecoder: NSCoder) {
+        
+
         super.init(coder: aDecoder)
+        
+        width = CGFloat(self.collectionView?.bounds.size.width ?? collectionViewDefaultWidth)
         self.scrollDirection = .vertical
-        self.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.sectionInset = UIEdgeInsets(top: 0, left: width / 10, bottom: 0, right: width / 10)
         self.itemSize = CGSize(width: 105, height: 105)
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
 
         let attributesArray = super.layoutAttributesForElements(in: rect)
-        var previosRow  = 0
         
         for attributes in attributesArray! {
             

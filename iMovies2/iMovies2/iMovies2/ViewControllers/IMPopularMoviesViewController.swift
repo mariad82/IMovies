@@ -137,7 +137,7 @@ class IMPopularMoviesViewController: UIViewController, UITableViewDelegate, UITa
         }
         else {
             
-            cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0.4796279073, blue: 0, alpha: 1)
+            cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 0.5515573621, blue: 0, alpha: 1)
 
         }
         
