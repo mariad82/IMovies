@@ -76,8 +76,8 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         
 //        self.changeLocale(languageValues.appleEnglish.rawValue)
         super.viewDidLoad()
-//        self.labelGenreSelection.text = "Select Genre"//NSLocalizedString("SelectGenre", comment: "Select Genre")
-//        self.navigationItem.title = "Genres"//NSLocalizedString("Genres", comment: "Genres")
+        self.labelGenreSelection.text = "Select Genre"//NSLocalizedString("SelectGenre", comment: "Select Genre")
+        self.navigationItem.title = "Genres"//NSLocalizedString("Genres", comment: "Genres")
 
         // Do any additional setup after loading the view.
     }
@@ -88,8 +88,8 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewWillAppear(animated)
         
 
-        customizeNavigationBar()
-//        setDefaultLanguageToEnglish()
+        setDefaultLanguageToEnglish()
+        changeNavigationItemTitle()
         myGenres = getAllGenres()
         
         
@@ -99,7 +99,9 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         UserDefaults.standard.set(languageValues.english.rawValue, forKey: Global.kSelectedLanguage)
         UserDefaults.standard.synchronize()
-        self.changeLocale(languageValues.appleEnglish.rawValue)
+        self.navigationItem.title = languages.english.rawValue
+        changeNavigationItemTitle()
+//        self.changeLocale(languageValues.appleEnglish.rawValue)
 
     }
 
@@ -111,23 +113,42 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         switch selectedCode {
         case .english:
             UserDefaults.standard.set(languageValues.hebrew.rawValue, forKey: Global.kSelectedLanguage)
-//            self.changeLocale(languageValues.appleHebrew.rawValue)
             self.navigationItem.rightBarButtonItem?.title = languages.hebrew.rawValue
         case .hebrew:
             UserDefaults.standard.set(languageValues.english.rawValue, forKey: Global.kSelectedLanguage)
 //            self.changeLocale(languageValues.appleEnglish.rawValue)
             self.navigationItem.rightBarButtonItem?.title = languages.english.rawValue
+        case .russian:
+            UserDefaults.standard.set(languageValues.russian.rawValue, forKey: Global.kSelectedLanguage)
+
         }
         
         UserDefaults.standard.synchronize()
-        self.navigationItem.title = "Genres"//NSLocalizedString("Genres", comment: "Genres")
+        self.navigationItem.title = "Genres"  //NSLocalizedString("Genres", comment: "Genres")
         self.labelGenreSelection.text = "SelectGenre"//NSLocalizedString("SelectGenre", comment: "Select Genre")
 
+        changeNavigationItemTitle()
         myGenres = getAllGenres()
     }
     
-    fileprivate func customizeNavigationBar() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "EN", style: .bordered, target: self, action: #selector(didTapChangeLanguageButton))
+    fileprivate func changeNavigationItemTitle() {
+        
+
+        let selectedLanguageCode  = languageValues(rawValue:UserDefaults.standard.value(forKey: Global.kSelectedLanguage) as! String)
+        var displayLanguage = ""
+        
+        switch selectedLanguageCode {
+        case .english:
+            displayLanguage = languages.english.rawValue
+        case .russian:
+            displayLanguage = languages.russian.rawValue
+        case .hebrew:
+            displayLanguage = languages.hebrew.rawValue
+        default:
+            displayLanguage = languages.hebrew.rawValue
+
+        }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: displayLanguage, style: .bordered, target: self, action: #selector(didTapChangeLanguageButton))
     }
     
 //    MARK: - Network calls
@@ -137,7 +158,7 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         var requestResults = Genres()
                 
-        let selectedLanguage = "en-US"//UserDefaults.standard.value(forKey: Global.kSelectedLanguage) as! String
+        let selectedLanguage = UserDefaults.standard.value(forKey: Global.kSelectedLanguage) as! String
         print(selectedLanguage)
 
         let stringUrl = "\(requestURLs.getGenres)\(selectedLanguage)"

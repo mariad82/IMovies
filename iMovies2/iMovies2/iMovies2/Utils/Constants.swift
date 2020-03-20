@@ -62,10 +62,11 @@ enum TrailerSearchType : String {
     case official = "Official"
 }
 
-enum languages : String {
+enum languages : String { //for displaying on navigation bar
     
     case english = "EN"
     case hebrew = "HE"
+    case russian = "RU"
 }
 
 enum languageCodes: Int {
@@ -75,12 +76,17 @@ enum languageCodes: Int {
     case hebrew = 2
 }
 
-enum languageValues: String {
+enum languageValues: String { // for sending to API
     
     case english = "en-US"
     case russian = "ru-RUS"
     case hebrew = "he-he"
+}
+
+enum appleLanguages: String { // for changing locale
+    
     case appleEnglish = "en"
     case appleHebrew = "he"
     case appleRussina = "ru"
+
 }
