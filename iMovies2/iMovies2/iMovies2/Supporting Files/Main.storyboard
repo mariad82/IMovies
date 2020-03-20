@@ -46,7 +46,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ewe-3z-WSB">
                                 <rect key="frame" x="0.0" y="153" width="414" height="709"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="themeColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IgQ-By-bg4" customClass="IMGenresCollectionViewLayout" customModule="iMovies2" customModuleProvider="target">
                                     <size key="itemSize" width="135" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -100,7 +100,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="themeColor"/>
                         <constraints>
                             <constraint firstItem="bQf-tP-KXz" firstAttribute="top" secondItem="6PN-jd-VhF" secondAttribute="top" constant="33" id="7cb-rx-vNL"/>
                             <constraint firstItem="Ewe-3z-WSB" firstAttribute="top" secondItem="bQf-tP-KXz" secondAttribute="bottom" constant="10" id="AWf-Ec-leB"/>
@@ -139,7 +139,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v4c-J1-lEJ">
                                 <rect key="frame" x="0.0" y="153" width="414" height="699"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="themeColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IMMovieTableViewCell" rowHeight="136" id="Z6p-nD-fcK" customClass="IMMovieTableViewCell" customModule="iMovies2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="136"/>
@@ -184,7 +184,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="themeColor"/>
                         <constraints>
                             <constraint firstItem="cDo-ro-BBG" firstAttribute="trailing" secondItem="v4c-J1-lEJ" secondAttribute="trailing" id="6yn-xU-66b"/>
                             <constraint firstItem="v4c-J1-lEJ" firstAttribute="leading" secondItem="cDo-ro-BBG" secondAttribute="leading" id="A6i-pC-z82"/>
@@ -267,7 +267,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="themeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ukn-ge-t4Q" secondAttribute="trailing" constant="10" id="0gU-ur-qU7"/>
                                             <constraint firstItem="peu-XF-Nyc" firstAttribute="top" secondItem="eQO-mE-QRC" secondAttribute="top" id="4XP-7X-Zyj"/>
@@ -292,6 +292,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="themeColor"/>
                                 <constraints>
                                     <constraint firstItem="ZsM-Jb-c9U" firstAttribute="top" secondItem="P4U-L3-Hws" secondAttribute="top" id="8Vp-js-at7"/>
                                     <constraint firstAttribute="bottom" secondItem="ZsM-Jb-c9U" secondAttribute="bottom" id="8cE-8M-yWx"/>
@@ -303,7 +304,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="PCJ-eh-Fy0"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="themeColor"/>
                         <constraints>
                             <constraint firstItem="lPr-j4-RfU" firstAttribute="trailing" secondItem="P4U-L3-Hws" secondAttribute="trailing" constant="5" id="OaA-0r-ud9"/>
                             <constraint firstItem="P4U-L3-Hws" firstAttribute="centerX" secondItem="lPr-j4-RfU" secondAttribute="centerX" id="R0a-yf-eyM"/>
@@ -340,7 +341,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V1h-Qg-qvD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="708"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="themeColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLc-fF-cAp" customClass="IMTrailerCollectionViewLayout" customModule="iMovies2" customModuleProvider="target">
                                     <size key="itemSize" width="230" height="229"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -393,7 +394,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="themeColor"/>
                         <viewLayoutGuide key="safeArea" id="f3d-WT-hZS"/>
                     </view>
                     <navigationItem key="navigationItem" id="c8E-IL-97Z"/>
@@ -410,10 +411,13 @@
     <resources>
         <image name="Movies-icon" width="64" height="64"/>
         <namedColor name="cellColor">
-            <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98575001955032349" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="fontColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeColor">
+            <color red="0.57816743850708008" green="0.27500849962234497" blue="0.079695992171764374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
