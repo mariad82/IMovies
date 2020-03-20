@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="153" width="414" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IgQ-By-bg4" customClass="IMGenresCollectionViewLayout" customModule="iMovies2" customModuleProvider="target">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="135" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -61,22 +61,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Folder-Movies-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nwF-jW-h1L">
-                                                    <rect key="frame" x="16" y="8" width="103" height="128"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Movies-icon" translatesAutoresizingMaskIntoConstraints="NO" id="nwF-jW-h1L">
+                                                    <rect key="frame" x="16" y="35.5" width="103" height="64"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0A-3a-z0u">
-                                                    <rect key="frame" x="67.5" y="133" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="67.5" y="99.5" width="0.0" height="33.5"/>
                                                     <fontDescription key="fontDescription" name="VAGRoundedBold" family="VAGRounded" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nwF-jW-h1L" firstAttribute="top" secondItem="W7K-ma-6lf" secondAttribute="top" constant="8" id="9VW-GN-m0D"/>
+                                                <constraint firstItem="nwF-jW-h1L" firstAttribute="centerY" secondItem="W7K-ma-6lf" secondAttribute="centerY" id="A49-A5-Y8C"/>
+                                                <constraint firstItem="nwF-jW-h1L" firstAttribute="centerX" secondItem="W7K-ma-6lf" secondAttribute="centerX" id="MG9-O1-QQg"/>
                                                 <constraint firstItem="g0A-3a-z0u" firstAttribute="top" secondItem="nwF-jW-h1L" secondAttribute="bottom" constant="2" id="TGZ-Vr-ZXy"/>
                                                 <constraint firstItem="g0A-3a-z0u" firstAttribute="centerX" secondItem="W7K-ma-6lf" secondAttribute="centerX" id="XP9-qS-PYk"/>
                                                 <constraint firstAttribute="bottom" secondItem="g0A-3a-z0u" secondAttribute="bottom" constant="2" id="a0o-NG-4lT"/>
                                                 <constraint firstAttribute="trailing" secondItem="nwF-jW-h1L" secondAttribute="trailing" constant="16" id="gMt-Ze-m3t"/>
+                                                <constraint firstItem="g0A-3a-z0u" firstAttribute="top" secondItem="nwF-jW-h1L" secondAttribute="bottom" id="gU6-FC-HyS"/>
                                                 <constraint firstItem="nwF-jW-h1L" firstAttribute="leading" secondItem="W7K-ma-6lf" secondAttribute="leading" constant="16" id="wPB-vM-X01"/>
                                             </constraints>
                                             <variation key="default">
@@ -403,7 +405,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Folder-Movies-icon" width="128" height="128"/>
+        <image name="Movies-icon" width="64" height="64"/>
         <namedColor name="cellColor">
             <color red="0.017000000923871994" green="0.19799999892711639" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

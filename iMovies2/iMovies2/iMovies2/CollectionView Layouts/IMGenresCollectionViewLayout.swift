@@ -30,7 +30,7 @@ class IMGenresCollectionViewLayout: UICollectionViewFlowLayout {
         super.init()
         self.scrollDirection = .vertical
         
-        self.itemSize = CGSize(width: 125, height: 125)
+        self.itemSize = CGSize(width: 105, height: 105)
         self.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
     }
@@ -39,7 +39,7 @@ class IMGenresCollectionViewLayout: UICollectionViewFlowLayout {
         super.init(coder: aDecoder)
         self.scrollDirection = .vertical
         self.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        self.itemSize = CGSize(width: 125, height: 125)
+        self.itemSize = CGSize(width: 105, height: 105)
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -49,7 +49,7 @@ class IMGenresCollectionViewLayout: UICollectionViewFlowLayout {
         
         for attributes in attributesArray! {
             
-            attributes.size = CGSize(width: 125, height: 125)
+            attributes.size = CGSize(width: 105, height: 105)
             attributes.transform = CGAffineTransform(rotationAngle: CGFloat(rotation.deg2rad()))
         }
         return attributesArray
