@@ -132,5 +132,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B13F480C-4BF1-430D-8A77-05AF0BC1348E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iMovies2/ViewControllers/IMMainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "getAllGenres()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B13F480C-4BF1-430D-8A77-05AF0BC1348E - 84bfa5f77f058644"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in iMovies2.IMMainViewController.getAllGenres() -&gt; iMovies2.Genres"
+                  moduleName = "iMovies2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/dev/iMovies/iMovies2/iMovies2/iMovies2/ViewControllers/IMMainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "956">
+               </Location>
+               <Location
+                  uuid = "B13F480C-4BF1-430D-8A77-05AF0BC1348E - 35f07d10bd9fbbfd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in iMovies2.IMMainViewController.getAllGenres() -&gt; iMovies2.Genres"
+                  moduleName = "iMovies2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/dev/iMovies/iMovies2/iMovies2/iMovies2/ViewControllers/IMMainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77BBB5AF-7A03-4FB4-94EF-7682F38F40F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iMovies2Tests/iMovies2Tests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "iMovies2Tests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
