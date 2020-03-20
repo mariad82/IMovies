@@ -99,7 +99,6 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         UserDefaults.standard.set(languageValues.english.rawValue, forKey: Global.kSelectedLanguage)
         UserDefaults.standard.synchronize()
-        self.navigationItem.title = languages.english.rawValue
         changeNavigationItemTitle()
 //        self.changeLocale(languageValues.appleEnglish.rawValue)
 
@@ -124,11 +123,12 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
         UserDefaults.standard.synchronize()
-        self.navigationItem.title = "Genres"  //NSLocalizedString("Genres", comment: "Genres")
         self.labelGenreSelection.text = "SelectGenre"//NSLocalizedString("SelectGenre", comment: "Select Genre")
 
         changeNavigationItemTitle()
         myGenres = getAllGenres()
+        self.navigationItem.title = "Genres"  //NSLocalizedString("Genres", comment: "Genres")
+
     }
     
     fileprivate func changeNavigationItemTitle() {
@@ -136,19 +136,42 @@ class IMMainViewController: UIViewController, UICollectionViewDelegate, UICollec
 
         let selectedLanguageCode  = languageValues(rawValue:UserDefaults.standard.value(forKey: Global.kSelectedLanguage) as! String)
         var displayLanguage = ""
+        var displayicon = ""
         
         switch selectedLanguageCode {
         case .english:
             displayLanguage = languages.english.rawValue
+            displayicon = "United-Kingdom-Flag-3-icon"
         case .russian:
             displayLanguage = languages.russian.rawValue
+            displayicon = "United-Kingdom-Flag-3-icon"
         case .hebrew:
             displayLanguage = languages.hebrew.rawValue
+            displayicon = "Israel-Flag-3-icon"
         default:
             displayLanguage = languages.hebrew.rawValue
-
+            displayicon = "Israel-Flag-3-icon"
         }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: displayLanguage, style: .bordered, target: self, action: #selector(didTapChangeLanguageButton))
+        self.navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 1, green: 0.4796279073, blue: 0, alpha: 1)
+
+
+        // Bar title text color
+        let shadow = NSShadow()
+        shadow.shadowColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        shadow.shadowOffset = CGSize(width: 0, height: 1)
+        let color : UIColor = .black
+        let titleFont : UIFont = UIFont(name: "AmericanTypewriter", size: 16.0)!
+
+        let attributes = [
+            NSAttributedString.Key.foregroundColor : color,
+            NSAttributedString.Key.shadow : shadow,
+            NSAttributedString.Key.font : titleFont
+        ]
+
+//        self.navigationItem.rightBarButtonItem?.image = UIImage(named: displayicon)
+        UIBarItem.appearance().setTitleTextAttributes(attributes, for: .normal)
+
     }
     
 //    MARK: - Network calls

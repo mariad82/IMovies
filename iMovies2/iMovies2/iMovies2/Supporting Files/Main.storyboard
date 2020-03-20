@@ -150,6 +150,9 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Njy-pB-qen">
                                                     <rect key="frame" x="10" y="8" width="124" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="NAC-B6-Oas"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-Ax-QA8">
                                                     <rect key="frame" x="157" y="68" width="237" height="0.0"/>
@@ -160,10 +163,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Njy-pB-qen" firstAttribute="width" secondItem="4bh-tq-rhy" secondAttribute="width" multiplier="0.3" id="Gcr-Xz-qIa"/>
-                                                <constraint firstItem="Njy-pB-qen" firstAttribute="top" secondItem="4bh-tq-rhy" secondAttribute="top" constant="8" id="JAz-Ay-8Mc"/>
-                                                <constraint firstItem="rG4-Ax-QA8" firstAttribute="centerY" secondItem="Njy-pB-qen" secondAttribute="centerY" id="L3J-M6-pvR"/>
-                                                <constraint firstItem="Njy-pB-qen" firstAttribute="centerY" secondItem="4bh-tq-rhy" secondAttribute="centerY" id="Qe2-QV-Yru"/>
-                                                <constraint firstAttribute="bottom" secondItem="Njy-pB-qen" secondAttribute="bottom" constant="8" id="cPm-UD-Q3n"/>
+                                                <constraint firstItem="rG4-Ax-QA8" firstAttribute="centerY" secondItem="4bh-tq-rhy" secondAttribute="centerY" id="S1N-WS-Vey"/>
+                                                <constraint firstItem="Njy-pB-qen" firstAttribute="top" secondItem="4bh-tq-rhy" secondAttribute="top" constant="8" id="Xjq-5J-Qci"/>
+                                                <constraint firstItem="Njy-pB-qen" firstAttribute="top" secondItem="4bh-tq-rhy" secondAttribute="top" constant="8" id="dbP-kB-pXT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Njy-pB-qen" secondAttribute="bottom" constant="8" id="fEs-4p-AbX"/>
                                                 <constraint firstItem="rG4-Ax-QA8" firstAttribute="trailing" secondItem="4bh-tq-rhy" secondAttribute="trailingMargin" id="nXe-IQ-1u4"/>
                                                 <constraint firstItem="Njy-pB-qen" firstAttribute="leading" secondItem="4bh-tq-rhy" secondAttribute="leading" constant="10" id="prR-Yb-NyL"/>
                                                 <constraint firstItem="rG4-Ax-QA8" firstAttribute="leading" secondItem="Njy-pB-qen" secondAttribute="trailing" constant="23" id="toL-fI-mAf"/>

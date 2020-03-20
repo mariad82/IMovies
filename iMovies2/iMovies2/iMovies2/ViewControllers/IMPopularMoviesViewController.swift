@@ -50,7 +50,7 @@ class IMMovieTableViewCell: UITableViewCell {
             let imageUrl = URL(string: imageURLString) 
             
                 
-                imageViewMovieIcon.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "Folder-Movies-icon"), options: SDWebImageOptions.progressiveLoad) { (image, error, chacheType, url) in
+                imageViewMovieIcon.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "Movies-icon"), options: SDWebImageOptions.progressiveLoad) { (image, error, chacheType, url) in
 
             }
             
@@ -268,6 +268,7 @@ extension IMPopularMoviesViewController: UISearchResultsUpdating, UISearchBarDel
             datasourceArray = filteredDataSource
             filteredDataSource.removeAll()
         }
+    
         
         tableViewMovies.reloadData()
     }
