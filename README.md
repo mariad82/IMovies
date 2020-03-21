@@ -39,7 +39,7 @@ iMovies written completely in Swift.
 Application Architecture
 
 The iMovies 2.0 project includes iOS app targets, iOS  app extensions, and 3d party gramework, e.g Alamofire, YouTube , TheMovieDB and so on
-
+iMovies supports Dark Mode
 
 Swift Features
 
